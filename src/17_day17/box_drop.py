@@ -97,7 +97,7 @@ def main():
     file_str = output_file(filename, deck=deck)
 
     # call LSDYNA
-    # run_dyna(file_str)
+    run_dyna(file_str)
 
 
 if __name__ == '__main__':
