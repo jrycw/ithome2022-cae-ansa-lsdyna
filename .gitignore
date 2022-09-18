@@ -128,5 +128,7 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# config
-config.py
+# custom
+.streamlit/
+env.py
+pull_to_trigger-deployment.yaml
