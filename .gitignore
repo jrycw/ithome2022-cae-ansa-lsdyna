@@ -132,3 +132,4 @@ dmypy.json
 .streamlit/
 env.py
 pull_to_trigger-deployment.yaml
+*.igs
