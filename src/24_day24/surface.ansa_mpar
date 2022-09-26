@@ -1,0 +1,317 @@
+#===FILEINFO:VERSION_CREATED:23.0.0 LAST_VERSION_MODIFIED:23.0.0===
+# 
+# ANSA Version
+#
+    ANSA_Version = 23.0.0
+# 
+# Mesh parameters
+#
+    mesh_parameters_name      = surface
+    mesh_parameters_delimiter = ||
+# 
+# Shell Mesh
+#
+# 
+# General Mesh
+#
+    mesh_type                           = general
+    element_type                        = mixed
+    element_order                       = first
+    existing_mesh_treatment             = erase
+    target_element_length               = 0.2
+    general_curvature_minimum_length    = 0.
+    remove_perimeters_with_distance     = 0.35*L
+    collapse_fe_junctions_with_distance = 0.
+    flat_perimeters_defeaturing_level   = fine
+# 
+# CFD
+# 
+    cfd_interior_growth_rate                   = 1.2
+    cfd_distortion_angle                       = 15.
+    cfd_min_length                             = 1.
+    cfd_max_length                             = 1000.
+    cfd_auto_length_calculation                = false
+    cfd_proximity_between_different_pids_parts = false
+    cfd_proximity_based_on                     = Whole model
+    cfd_proximity_in_the_same_pid_part         = false
+    cfd_max_angle_between_normals              = 40.
+    cfd_length_to_gap_refinement_ratio         = 0.3
+    cfd_min_proximity_length                   = 1.
+    cfd_convex_curvature_treatment             = false
+    cfd_reduce_max_length                      = true
+    cfd_reduce_local_length                    = false
+    cfd_reduce_max_length_accounts_sizeents    = false
+    cfd_orientation_based_refinement           = false
+    cfd_reduction_factor                       = 0.5
+    cfd_max_radius_of_curvature                = 1000.
+    cfd_orientation_vector_dx                  = 0.
+    cfd_orientation_vector_dy                  = 0.
+    cfd_orientation_vector_dz                  = -1.
+    cfd_max_angle_deviation                    = 60.
+# 
+# STL
+# 
+    stl_distortion_distance     = 0.2
+    stl_max_length              = 0.
+    stl_min_length              = 1.
+    stl_distortion_angle_value  = 20.
+    stl_distortion_angle_flag   = false
+# 
+# Structural
+# 
+    maximum_aspect_ratio                 = 5.
+    remove_perimeters_angle              = 10.
+    structural_proximity                 = false
+    structural_max_angle_between_normals = 40.
+    structural_length_to_thickness_ratio = 2.
+    structural_min_refinement_length     = 5.
+# 
+# Feature options
+# 
+    bm_features_handling   = Clear
+    orientation_definition = Fix
+# 
+# Freeze
+# 
+    freeze_single_perimeters = false
+    freeze_triple_perimeters = false
+    freeze_double_perimeters = false
+    freeze_line_elements     = false
+    freeze_named_grids       = true
+    freeze_holes_2d          = false
+# 
+# Remove triangles from
+# 
+    remove_triangle_from_spots     = false
+    remove_triangle_from_int_perim = false
+    remove_triangle_from_ext_perim = false
+# 
+# Zones options
+# 
+    attach_zones_on_perimeters              = 0.35*L
+    create_perims_on_zones                  = false
+    create_ortho_trias_on_zones             = false
+    create_zones_only_on_flat_areas         = true
+    create_corner_quads_at_zones            = false
+# 
+# Flanges 3D options
+# 
+    flanges_3d_refine_perimeters = false
+# 
+# Fillets options
+# 
+    create_mapped_mesh_in_fillets   = true
+# 
+# Holes 3D options
+# 
+    create_ortho_trias_on_holes_3d = true
+# 
+# Perimeters
+#
+    maintain_sharp_edge_ribs                              = false
+    maintain_set_or_include_bounds                        = true
+    set_perimeters_treatment                              = allow_join
+    joined_perimeters                                     = Reset
+    create_perims_on_symmetry_plane                       = false
+    cut_mesh_on_symmetry_plane                            = false
+    freeze_segments_in_symmetry                           = true
+    recognize_property_bounds_as_perimeters               = true
+    recognize_part_bounds_as_perimeters                   = true
+    recognize_feature_line_bounds_as_perimeters           = true
+    recognize_feature_line_bounds_option                  = Generic
+    recognize_feature_line_bounds_angle                   = 20.
+    recognize_feature_line_bounds_corner_angle            = 40.
+    user_defined_feature_lines                            = true
+    recognize_feature_line_auto_close                     = true
+    treat_perimeters                                      = false
+    rule_perimeter                                        = default = true || active = true || name = none || sides = none || angle = none || pid = - || part = - || sets_names = none || treatment = 1
+    treatment_perimeter                                   = 1 || name = none || join = false || join_option = off || spacing = true || spacing_option = auto || number_or_length = none || zones = false || zones_type = specific || specific_zones = none || radial_offset = false || blended = false || smooth_zones = full || proximity_distance_factor = 0. || proximity_distance_option = * last height || cut_faces_on_zones = false || first_height_option = Absolute first height || first_height_value = 0.1 || growth_factor = 1.2 || zones_number_flag = true || zones_number = 5 || max_aspect_flag = true || max_aspect = 0.4 || constant_height_zones_flag = false || constant_height_zones = 2 || separate_angle = 90. || connect_angle = 60. || elements_type = quad
+# 
+# Fillets
+# 
+    recognize_fillets                   = false
+    recognize_fillets_max_radius        = 20.
+    recognize_fillets_min_angle         = 20.
+    treat_fillets                       = false
+    rule_fillet                         = default = true || active = true || name = none || convexity = none || radius = none || width = none || angle = none || treatment = 3
+    treatment_fillet                    = 3 || name = none || defeaturing = false || defeaturing_option = split || forbid_join_perimeters_created_from_split = false || join_upper_lower_perimeters_during_split = true || length = false || length_value = none || rows = true || rows_option = auto || custom_distortion = false || distortion_distance = 20% || distortion_angle = 0. || even_rows = false || rows_number = 0
+# 
+# Chamfers
+# 
+    recognize_chamfers           = false
+    recognize_chamfers_min_angle = 20.
+    recognize_chamfers_max_angle = 70.
+    recognize_chamfers_max_width = 1.
+    treat_chamfers               = false
+    rule_chamfer                 = default = true || active = true || name = none || width = none || angle = none || treatment = 4
+    treatment_chamfer            = 4 || name = none || defeaturing = true || defeaturing_option = off
+# 
+# Flanges 2D
+#
+    recognize_flanges_2d                      = false
+    recognize_flanges_2d_proximity            = false
+    recognize_flanges_2d_proximity_option     = factor
+    recognize_flanges_2d_proximity_factor     = 1.2
+    recognize_flanges_2d_proximity_distance   = 2.5
+    recognize_flanges_2d_proximity_angle      = 10.
+    recognize_flanges_2d_min_width            = 0.
+    recognize_flanges_2d_max_width            = 30.
+    recognize_flanges_2d_connections          = false
+    recognize_flanges_2d_connections_option   = Specified distance
+    recognize_flanges_2d_connections_distance = 2.5
+    treat_flanges_2d                          = false
+    rule_flange_2d                            = default = true || active = true || name = none || width = none || proximity = none || connections = - || treatment = 5
+    treatment_flange_2d                       = 5 || name = none || length = false || length_value = none || rows = true || rows_option = off || rows_number = none
+# 
+# Flanges 3D
+# 
+    recognize_flanges_3d                    = false
+    recognize_flanges_3d_proximity          = false
+    recognize_flanges_3d_proximity_distance = 0.5
+    recognize_flanges_3d_proximity_angle    = 5.
+    treat_flanges_3d                        = false
+    rule_flange_3d                          = default = true || active = true || name = none || area = none || proximity = none || treatment = 9
+    treatment_flange_3d                     = 9 || name = none || length = true || length_value = none
+# 
+# Holes 2D
+#
+    recognize_holes_2d                     = false
+    washers_recognition_strictness_level   = Strict
+    recognize_holes_2d_external_perimeters = false
+    recognize_holes_2d_filled              = false
+    recognize_holes_2d_proximity           = false
+    recognize_holes_2d_proximity_distance  = 10.
+    recognize_holes_2d_proximity_angle     = 10.
+    recognize_holes_2d_connections         = false
+    recognize_holes_2d_connections_option  = bolt
+    treat_holes_2d                         = false
+    rule_hole_2d                           = default = true || active = true || name = none || shape = none || diam_or_size = none || size_2 = none || ratio = none || eq_diameter = none || proximity = - || connection = - || treatment = 2
+    treatment_hole_2d                      = 2 || name = none || defeaturing = false || defeaturing_option = fill || nodes_number = true || number_value = auto || treat_as_round = false || zones = false || zones_option = specific || specific_zones = none || target_diam_or_size = false || target_diam_or_size_value = none
+# 
+# Holes 3D
+# 
+    recognize_holes_3d                    = false
+    recognize_holes_3d_connections        = false
+    recognize_holes_3d_connections_option = bolt
+    treat_holes_3d                        = false
+    rule_hole_3d                          = default = true || active = true || name = none || diameter = none || height = none || straight = - || blind = - || connection = - || treatment = 8
+    treatment_hole_3d                     = 8 || defeaturing = false || defeaturing_option = fill || nodes_number = true || number_value = auto || zones = false || zones_option = specific || specific_zones = none
+# 
+# Logos
+#
+    recognize_logos        = false
+    recognize_logos_height = 2.
+    recognize_logos_size   = 20.
+    treat_logos            = false
+    rule_logo              = default = true || active = true || name = none || height = none || size = none || treatment = 7
+    treatment_logo         = 7 || name = none || defeaturing = true || defeaturing_option = off
+# 
+# Stamps
+#
+    recognize_stamps               = false
+    recognize_stamps_height        = 15.
+    recognize_stamps_size          = 150.
+    treat_stamps                   = false
+    stamps_apply_dm_representation = off
+    rule_stamp                     = default = true || active = true || name = none || height = none || size = none || top = none || treatment = 6
+    treatment_stamp                = 6 || name = none || defeaturing = false || defeaturing_option = off || top_fillet = split || bottom_fillet = split || rows = true || rows_option = auto || custom_distortion = false || distortion_distance = 20% || distortion_angle = 0. || even_rows = false || rows_number = 0
+# 
+# Ribs
+#
+    recognize_ribs_2d = false
+# 
+# Special Perimeters
+#
+    recognize_special_perimeters           = false
+    special_perimeters_fe_break_angle      = 60.
+    special_perimeters_geom_break_angle    = 10.
+    recognize_sharp_perimeters             = false
+    recognize_leading_perimeters           = false
+    recognize_leading_perimeters_min_angle = 140.
+    recognize_leading_perimeters_max_width = 500.
+    recognize_free_perimeters              = false
+    treat_special_perimeters               = false
+    rule_special_perimeter                 = default = true || active = true || name = none || type = none || convexity = none || angle = none || length = none || treatment = 10
+    treatment_special_perimeter            = 10 || name = none || join = false || join_option = off || distribution = true || spacing_option = auto || number_or_length = none || zones = false || zones_type = anisotropic || cut_faces_on_zones = false || first_height_option = Absolute first height || distortion_angle = 5. || mininum_first_height = 0.1 || first_height_value = 0.1 || growth_factor = 1.2 || zones_number_flag = true || zones_number = 5 || max_aspect_flag = true || max_aspect = 0.4 || constant_height_zones_flag = false || constant_height_zones = 2 || separate_angle = 90. || connect_angle = 60. || elements_type = quad || zones_number = 5 || separate_angle = 90. || connect_angle = 60.
+# 
+# Trailing
+#
+    recognize_trailing           = false
+    recognize_trailing_min_angle = 60.
+    recognize_trailing_min_width = 1.
+    recognize_trailing_max_width = 5.
+    treat_trailing               = false
+    rule_trailing                = default = true || active = true || name = none || angle = none || width = none || treatment = 11
+    treatment_trailing           = 11 || name = none || rows = true || rows_option = off || rows_number = 1 || min_aspect_ratio = 1. || mesh_type = tria || zones = false || zones_type = anisotropic || growth_factor = 1.2 || zones_number_flag = true || zones_number = 5 || max_aspect_flag = true || max_aspect = 0.4 || separate_angle = 90. || connect_angle = 60. || cut_faces_on_zones = false || zones_number = 5 || separate_angle = 90. || connect_angle = 60.
+# 
+# Fasteners
+#
+    recognize_fasteners                        = false
+    recognize_fasteners_search_for_embedded    = false
+    recognize_fasteners_search_for_clips       = false
+    recognize_fasteners_in_parts_with_existing = false
+    treat_fasteners                            = false
+    fasteners_apply_dm_representation          = off
+# 
+# Fix Quality
+#
+    fix_elements_general_flag                           = true
+    split_remain_viol_quads_flag                        = false
+    fix_minimum_length_in_fillets                       = true
+    fix_minimum_length_in_flanges_2d                    = true
+    create_perfect_hole_2d_zone                         = false
+    zones_around_violating                              = 3
+    maximum_distance_from_surface                       = 0.1*L
+    maximum_distortion_at_double_perimeters             = 0.2*L
+    maximum_distance_from_single_perimeters             = 0.2*L
+    maximum_distance_from_double_perimeters             = 0.5*L
+    maximum_distance_from_triple_perimeters             = 0.
+    maximum_distance_from_perimeter_for_2nd_order_nodes = 0.5*L
+    maximum_distance_from_surface_for_2nd_order_nodes   = 0.1*L
+# 
+# Volume Mesh
+#
+# 
+# Volume Fix Quality
+# 
+    fix_solid_elements_general_flag       = false
+    freeze_non_visible_shells             = false
+    unconstrained_2nd_order_nodes         = false
+    fix_solid_freeze_line_elements        = true
+    fix_solid_constrained_layer_nodes     = true
+    number_of_affected_solid_zones        = 3
+    fix_volume_external_bounds            = constrained
+    maximum_distance_from_external_bounds = 0.1*local
+    fix_volume_pid_bounds                 = unconstrained
+    maximum_distance_from_pid_bounds      = 0.1*local
+# 
+# CONS Resolution
+# 
+    perimeter_length                   = 0.2
+    distortion-distance                = 20.%
+    distortion-angle                   = 0.
+# 
+# Unstructured Volume Mesh Options
+# 
+    create_volume_mesh            = false
+    tetras_algorithm              = Tetra Rapid
+    tetras_criterion_type         = NASTRAN_Aspect_Ratio
+    tetras_criterion_value        = 4.
+    tetras_max_growth_rate        = 1.2
+    tetras_max_elem_length        = 0.
+    hexa_coordinate_system        = 0
+    hexa_buffer_zones             = 3
+    create_pyramids               = true
+    force2rows                    = false
+    frozen_entities_set_id        = 0
+    trans_pnt_offs                = true
+    do_not_violate_max_len        = false
+    light_volume_representation   = false
+    auto_define_coord_system      = false
+    decompose_domain              = false
+    connect_to_symmetry           = false
+# 
+# Auto Detect Volumes Options
+# 
+    auto_detect_whole_db                 = 1
+    auto_detected_volume_property_name   = 
