@@ -61,12 +61,12 @@ async def create_nodes(n: int = 100):
     return len(results)
 
 
-@ app.get('/cal-nodes-len', status_code=200)
+@app.get('/cal-nodes-len', status_code=200)
 async def cal_nodes_len():
     return len(_get_nodes())
 
 
-@ app.get('/show-ents', status_code=200)
+@app.get('/show-ents', status_code=200)
 async def show_ents():
     content = []
     ents = _get_all_ents()
@@ -78,7 +78,7 @@ async def show_ents():
     return content
 
 
-@ app.delete('/delete-ents', status_code=204)
+@app.delete('/delete-ents', status_code=204)
 async def delete_ents():
     ents = _get_all_ents()
     base.DeleteEntity(ents)
